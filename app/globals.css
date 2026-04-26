@@ -127,3 +127,32 @@
     @apply font-sans;
     }
 }
+
+/* ── Magic UI keyframes ──────────────────────────────────────────────── */
+
+@keyframes line-shadow {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0.5em 0.5em; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes pulse-ripple {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@theme inline {
+  --animate-line-shadow: line-shadow 4s linear infinite;
+  --animate-blink-cursor: blink-cursor 1s step-end infinite;
+  --animate-pulse-ripple: pulse-ripple 1.5s ease-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
+}

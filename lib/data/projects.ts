@@ -1,0 +1,58 @@
+import type { Project } from "@/lib/types"
+
+export const projects: Project[] = [
+  {
+    id: "1",
+    title: "Fragments of Light",
+    company: "Canal+",
+    date: "2024",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    thumbnailUrl: "/placeholders/project-1.jpg",
+    category: "Documentary",
+  },
+  {
+    id: "2",
+    title: "City in Motion",
+    company: "Vice Media",
+    date: "2024",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    thumbnailUrl: "/placeholders/project-2.jpg",
+    category: "Commercial",
+  },
+  {
+    id: "3",
+    title: "Unseen Hours",
+    company: "Arte",
+    date: "2023",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    thumbnailUrl: "/placeholders/project-3.jpg",
+    category: "Short Film",
+  },
+  {
+    id: "4",
+    title: "Between the Lines",
+    company: "Netflix France",
+    date: "2023",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    thumbnailUrl: "/placeholders/project-4.jpg",
+    category: "Documentary",
+  },
+  {
+    id: "5",
+    title: "Sound & Vision",
+    company: "France 24",
+    date: "2022",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    thumbnailUrl: "/placeholders/project-5.jpg",
+    category: "Music Video",
+  },
+  {
+    id: "6",
+    title: "The Quiet Storm",
+    company: "Independent",
+    date: "2022",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    thumbnailUrl: "/placeholders/project-6.jpg",
+    category: "Short Film",
+  },
+]

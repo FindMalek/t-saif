@@ -1,0 +1,22 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: "0 9 1,5,9,13,17,21,25,29 * *" # ~every 4 days at 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping health endpoint
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.HEALTH_SECRET }}" \
+            "${{ secrets.NEXT_PUBLIC_APP_URL }}/api/health")
+          echo "Health check status: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "Health check FAILED with status $STATUS"
+            exit 1
+          fi
+          echo "Health check passed."
