@@ -29,7 +29,7 @@ export function ProjectFilter({ active, onChange }: ProjectFilterProps) {
           key={filter}
           onClick={() => onChange(filter)}
           className={cn(
-            "shrink-0 rounded-full border px-4 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors",
+            "shrink-0 rounded-full border px-4 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
             active === filter
               ? "border-foreground bg-foreground text-background"
               : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"

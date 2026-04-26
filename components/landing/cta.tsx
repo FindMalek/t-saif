@@ -17,7 +17,7 @@ const STATS = [
 
 export function Cta() {
   return (
-    <WarpBackground className="py-24">
+    <WarpBackground className="py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-6">
         {/* VideoText headline */}
         <div className="mb-16 flex justify-center">

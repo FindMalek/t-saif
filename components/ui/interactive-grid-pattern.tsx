@@ -28,7 +28,7 @@ export function InteractiveGridPattern({
       width={width * horizontal}
       height={height * vertical}
       className={cn(
-        "pointer-events-auto absolute inset-0 h-full w-full border border-border/20",
+        "pointer-events-none absolute inset-0 h-full w-full border border-border/20 md:pointer-events-auto",
         className
       )}
       {...props}

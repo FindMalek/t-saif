@@ -1,3 +1,5 @@
+"use client"
+
 const BRANDS = ["Canal+", "Netflix France", "Vice Media", "Arte", "France 24"]
 
 export function Brands() {

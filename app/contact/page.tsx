@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <div className="relative mx-auto max-w-2xl px-6 py-16">
         {/* Background */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <InteractiveGridPattern
             squares={[32, 32]}
             className="opacity-40"

@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 import Text3DFlip from "@/components/ui/text-3d-flip"
 import type { Project } from "@/lib/types"
@@ -11,23 +11,31 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [playing, setPlaying] = useState(false)
 
-  function handleMouseEnter() {
+  function play() {
     videoRef.current?.play().catch(() => {})
+    setPlaying(true)
   }
 
-  function handleMouseLeave() {
+  function pause() {
     if (videoRef.current) {
       videoRef.current.pause()
       videoRef.current.currentTime = 0
     }
+    setPlaying(false)
+  }
+
+  function handleTap() {
+    playing ? pause() : play()
   }
 
   return (
     <article
       className="group cursor-pointer"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={play}
+      onMouseLeave={pause}
+      onClick={handleTap}
     >
       {/* Media */}
       <div className="relative aspect-video overflow-hidden rounded-lg bg-card">
@@ -39,6 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           loop
           playsInline
           poster={project.thumbnailUrl}
+          aria-hidden="true"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -55,7 +64,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <Text3DFlip
-          className="shrink-0 text-xs font-mono uppercase tracking-widest text-muted-foreground"
+          className="shrink-0 font-mono text-xs uppercase tracking-widest text-muted-foreground"
           textClassName="text-muted-foreground"
           flipTextClassName="text-foreground"
         >

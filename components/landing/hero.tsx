@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6">
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <FlickeringGrid className="h-full w-full" />
       </div>
 
@@ -19,8 +19,10 @@ export function Hero() {
               muted
               loop
               playsInline
+              preload="none"
               className="h-full w-full object-cover opacity-80"
               poster="/placeholders/hero.jpg"
+              aria-hidden="true"
             >
               {/* Replace with real reel */}
               <source
@@ -33,7 +35,7 @@ export function Hero() {
       </div>
 
       {/* Text overlay */}
-      <div className="relative z-20 mt-12 flex flex-col items-center gap-4 text-center">
+      <div className="relative z-20 mt-8 flex flex-col items-center gap-4 text-center sm:mt-12">
         <HeroText />
       </div>
     </section>

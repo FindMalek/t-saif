@@ -1,0 +1,11 @@
+import type { MetadataRoute } from "next"
+
+import { siteConfig } from "@/lib/site"
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: siteConfig.url, lastModified: new Date(), priority: 1 },
+    { url: `${siteConfig.url}/work`, lastModified: new Date(), priority: 0.8 },
+    { url: `${siteConfig.url}/contact`, lastModified: new Date(), priority: 0.7 },
+  ]
+}

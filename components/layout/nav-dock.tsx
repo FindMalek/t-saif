@@ -22,7 +22,7 @@ export function NavDock() {
 
   return (
     <div className="fixed bottom-6 left-0 right-0 z-50 flex justify-center">
-      <Dock iconSize={36} iconMagnification={52} iconDistance={120}>
+      <Dock iconSize={44} iconMagnification={58} iconDistance={130}>
         {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href
           return (
@@ -31,7 +31,7 @@ export function NavDock() {
                 href={href}
                 aria-label={label}
                 className={cn(
-                  "flex items-center justify-center text-muted-foreground transition-colors hover:text-foreground",
+                  "flex items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                   isActive && "text-foreground"
                 )}
               >
