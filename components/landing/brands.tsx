@@ -3,7 +3,7 @@
 const BRANDS = ["Canal+", "Netflix France", "Vice Media", "Arte", "France 24"]
 
 export function Brands() {
-  const doubled = [...BRANDS, ...BRANDS]
+  const doubled = [...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS]
 
   return (
     <section className="border-y border-border py-8 overflow-hidden">

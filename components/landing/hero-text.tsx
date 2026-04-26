@@ -16,8 +16,9 @@ export function HeroText() {
       />
 
       <h1 className="font-heading text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
+        Saif{" "}
         <LineShadowText shadowColor="oklch(0.56 0.021 213.5)">
-          Saif Tarchoun
+          Tarchoun
         </LineShadowText>
       </h1>
 
