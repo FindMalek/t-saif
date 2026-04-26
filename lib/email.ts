@@ -7,7 +7,7 @@ export const resend = new Resend(env.RESEND_API_KEY)
 
 // FROM must be a verified Resend sender domain in production
 // During development: use onboarding@resend.dev and a verified TO address
-const FROM = "Saif Portfolio <onboarding@resend.dev>"
+const FROM = "Saif Portfolio <saif@findmalek.com>"
 const TO = "malekgarahellalbus@gmail.com"
 
 export async function sendContactEmail(data: ContactFormData) {
