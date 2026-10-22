@@ -7,7 +7,7 @@ on:
 
 jobs:
   health:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, the-keep]
     steps:
       - name: Ping health endpoint
         run: |
